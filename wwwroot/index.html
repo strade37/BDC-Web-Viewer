@@ -12,7 +12,8 @@
 </head>
 
 <body>
-    <div id="header">
+    <!-- Header -->
+    <header id="header">
         <div class="header-left">
             <img class="logo" 
             src="/assets/images/logo-bdc.png" 
@@ -27,18 +28,47 @@
             placeholder="Search Project">
         </div>
         
-    <div class="header-right">
-        <select name="models" id="models"></select>
-        <button id="upload" title="Upload New Model">Upload</button>
-        <input style="display: none" type="file" id="input">
-        <button id="setting">⚙</button>
-        <button id="user">👤</button>
-    </div>
-    </div>
-    <div id="preview"></div>
-    <div id="overlay"></div>
+        <div class="header-right">
+            <select name="models" id="models"></select>
+            <button id="upload" title="Upload New Model">Upload</button>
+            <input style="display: none" type="file" id="input">
+            <button id="setting">⚙</button>
+            <button id="user">👤</button>
+        </div>
+
+    </header>
+
+    <!-- Main -->
+    <main id="main-layout">
+        <!-- Sidebar -->
+        <aside id="sidebar">
+
+            <div class="menu-item">Dashboard</div>
+            <div class="menu-item">Models</div>
+            <div class="menu-item">Documents</div>
+            <div class="menu-item">Issues</div>
+            <div class="menu-item">Clash</div>
+            <div class="menu-item">Settings</div>
+
+        </aside>
+
+        <!-- Viewer -->
+        <section id="viewer-container">
+            <!-- APS Viewer -->
+            <div id="preview"></div>
+            <!-- Notification Overlay -->
+            <div id="overlay"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+
+    </footer>
+
     <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.js"></script>
     <script src="/main.js" type="module"></script>
+
 </body>
 
 </html>
