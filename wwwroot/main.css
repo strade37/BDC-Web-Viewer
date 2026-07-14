@@ -1,3 +1,6 @@
+/* ==========================================================
+   GLOBAL
+========================================================== */
 body, html {
     margin: 0;
     padding: 0;
@@ -5,18 +8,9 @@ body, html {
     font-family: ArtifaktElement;
 }
 
-/* #header, #preview, #overlay {
-    position: absolute;
-    width: 100%;
-} */
-
-/* #header {
-    height: 3em;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-} */
+/* ==========================================================
+   HEADER
+========================================================== */
 
 #header {
     position: fixed;
@@ -36,82 +30,6 @@ body, html {
     border-bottom: 1px solid #e5e7eb;
     z-index: 1000;
 }
-
-/* ==========================================================
-   MAIN LAYOUT
-========================================================== */
-
-#main-layout {
-    display: flex;
-    margin-top: 64px;
-    height: calc(100vh - 64px);
-}
-/* ==========================================================
-   SIDEBAR
-========================================================== */
-
-#sidebar {
-    width: 260px;
-    flex-shrink: 0;
-
-    background: #ffffff;
-    border-right: 1px solid #e5e7eb;
-
-    overflow-y: auto;
-}
-/* ==========================================================
-   VIEWER
-========================================================== */
-
-#viewer-container {
-    flex: 1;
-    position: relative;
-}
-
-#preview,
-#overlay {
-    position: absolute;
-    inset: 0;
-}
-/* #preview, #overlay {
-    top: 3em;
-    bottom: 0;
-} */
-
-/* #preview,
-#overlay {
-    position: absolute;
-    top: 64px;
-    bottom: 0;
-    width: 100%;
-} */
-
-#overlay {
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 1em;
-    display: none;
-}
-
-#overlay > .notification {
-    margin: auto;
-    padding: 1em;
-    max-width: 50%;
-    background: white;
-}
-
-/* #header > * {
-    height: 2em;
-    margin: 0 0.5em;
-    font-size: 1em;
-    font-family: ArtifaktElement;
-} */
-
-/* #header .title {
-    flex: 1 0 auto;
-    height: auto;
-} */
-
 .title {
     margin-left: 12px;
     font-size: 18px;
@@ -153,3 +71,102 @@ body, html {
     height: 48px;
     width: auto;
 }
+
+/* ==========================================================
+   MAIN LAYOUT
+========================================================== */
+
+#main-layout {
+    display: flex;
+    margin-top: 64px;
+    height: calc(100vh - 64px);
+}
+/* ==========================================================
+   SIDEBAR
+========================================================== */
+
+#sidebar {
+    width: 260px;
+    flex-shrink: 0;
+
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+
+    overflow-y: auto;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+
+    height: 48px;
+    padding: 0 20px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #374151;
+
+    transition: all 0.2s ease;
+}
+.menu-item:hover {
+    background: #f3f4f6;
+}
+.menu-item.active {
+    background: #e8f1ff;
+
+    color: #0066cc;
+
+    font-weight: 600;
+
+    border-right: 3px solid #0066cc;
+}
+/* ==========================================================
+   VIEWER
+========================================================== */
+
+#viewer-container {
+    flex: 1;
+    position: relative;
+}
+
+#preview,
+#overlay {
+    position: absolute;
+    inset: 0;
+}
+
+
+#overlay {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    display: none;
+}
+
+#overlay > .notification {
+    margin: auto;
+    padding: 1em;
+    max-width: 50%;
+    background: white;
+}
+
+
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+
+
+/* ==========================================================
+   COMPONENTS
+========================================================== */
+
+/* nanti button */
+/* nanti dropdown */
+/* nanti modal */
+/* nanti card */
