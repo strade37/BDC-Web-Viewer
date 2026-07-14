@@ -5,10 +5,10 @@ body, html {
     font-family: ArtifaktElement;
 }
 
-#header, #preview, #overlay {
+/* #header, #preview, #overlay {
     position: absolute;
     width: 100%;
-}
+} */
 
 /* #header {
     height: 3em;
@@ -19,8 +19,9 @@ body, html {
 } */
 
 #header {
-    position: absolute;
+    position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     height: 64px;
 
@@ -33,21 +34,57 @@ body, html {
 
     background: #ffffff;
     border-bottom: 1px solid #e5e7eb;
-    z-index: 10;
+    z-index: 1000;
 }
 
+/* ==========================================================
+   MAIN LAYOUT
+========================================================== */
+
+#main-layout {
+    display: flex;
+    margin-top: 64px;
+    height: calc(100vh - 64px);
+}
+/* ==========================================================
+   SIDEBAR
+========================================================== */
+
+#sidebar {
+    width: 260px;
+    flex-shrink: 0;
+
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+
+    overflow-y: auto;
+}
+/* ==========================================================
+   VIEWER
+========================================================== */
+
+#viewer-container {
+    flex: 1;
+    position: relative;
+}
+
+#preview,
+#overlay {
+    position: absolute;
+    inset: 0;
+}
 /* #preview, #overlay {
     top: 3em;
     bottom: 0;
 } */
 
-#preview,
+/* #preview,
 #overlay {
     position: absolute;
     top: 64px;
     bottom: 0;
     width: 100%;
-}
+} */
 
 #overlay {
     z-index: 1;
