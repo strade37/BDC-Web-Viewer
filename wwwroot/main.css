@@ -98,6 +98,7 @@ body, html {
 .menu-item {
     display: flex;
     align-items: center;
+    gap: 12px;
 
     height: 48px;
     padding: 0 20px;
@@ -111,16 +112,18 @@ body, html {
 
     transition: all 0.2s ease;
 }
+.menu-item img {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
 .menu-item:hover {
     background: #f3f4f6;
 }
 .menu-item.active {
     background: #e8f1ff;
-
     color: #0066cc;
-
     font-weight: 600;
-
     border-right: 3px solid #0066cc;
 }
 /* ==========================================================

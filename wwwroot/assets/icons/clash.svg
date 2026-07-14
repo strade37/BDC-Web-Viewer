@@ -1,0 +1,36 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<!-- Cube kiri -->
+<path d="M3 7L8 4L13 7L8 10L3 7Z"
+stroke="#94A3B8"
+stroke-width="2"
+stroke-linejoin="round"/>
+
+<path d="M3 7V13L8 16L13 13V7"
+stroke="#94A3B8"
+stroke-width="2"
+stroke-linejoin="round"/>
+
+<path d="M8 10V16"
+stroke="#94A3B8"
+stroke-width="2"
+stroke-linecap="round"/>
+
+
+<!-- Cube kanan -->
+<path d="M11 11L16 8L21 11L16 14L11 11Z"
+stroke="#94A3B8"
+stroke-width="2"
+stroke-linejoin="round"/>
+
+<path d="M11 11V17L16 20L21 17V11"
+stroke="#94A3B8"
+stroke-width="2"
+stroke-linejoin="round"/>
+
+<path d="M16 14V20"
+stroke="#94A3B8"
+stroke-width="2"
+stroke-linecap="round"/>
+
+</svg>

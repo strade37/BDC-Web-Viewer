@@ -1,0 +1,23 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<path d="M12 3L21 8L12 13L3 8L12 3Z"
+stroke="#94A3B8"
+stroke-width="2"
+stroke-linejoin="round"/>
+
+<path d="M3 8V16L12 21L21 16V8"
+stroke="#94A3B8"
+stroke-width="2"
+stroke-linejoin="round"/>
+
+<path d="M12 13V21"
+stroke="#94A3B8"
+stroke-width="2"
+stroke-linecap="round"/>
+
+<path d="M7.5 10.5L16.5 5.5"
+stroke="#94A3B8"
+stroke-width="2"
+stroke-linecap="round"/>
+
+</svg>
