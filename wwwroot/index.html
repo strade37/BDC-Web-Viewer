@@ -13,11 +13,27 @@
 
 <body>
     <div id="header">
-        <img src="/assets/images/logo-bdc.png" alt="Binkei Digital Construction">
-        <span class="title">Binkei Digital Construction</span>
+        <div class="header-left">
+            <img class="logo" 
+            src="/assets/images/logo-bdc.png" 
+            alt="Binkei Digital Construction">
+            <span class="title">Binkei Digital Construction</span>
+        </div>
+        
+        <div class="header-center">
+        <input
+            id="search"
+            type="text"
+            placeholder="Search Project">
+        </div>
+        
+    <div class="header-right">
         <select name="models" id="models"></select>
         <button id="upload" title="Upload New Model">Upload</button>
         <input style="display: none" type="file" id="input">
+        <button id="setting">⚙</button>
+        <button id="user">👤</button>
+    </div>
     </div>
     <div id="preview"></div>
     <div id="overlay"></div>
