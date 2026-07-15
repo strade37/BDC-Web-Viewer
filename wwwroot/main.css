@@ -201,6 +201,41 @@ body, html {
     margin-top: 80px;
 }
 
+.property-group {
+    margin-bottom: 24px;
+}
+
+.property-group-title {
+    margin-bottom: 12px;
+
+    color: #6b7280;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+.property-item {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 8px 0;
+
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.property-name {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.property-value {
+    color: #111827;
+    font-size: 13px;
+    font-weight: 500;
+}
+
 /* ==========================================================
    FOOTER
 ========================================================== */

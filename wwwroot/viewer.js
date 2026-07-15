@@ -1,3 +1,4 @@
+import { setupProperties } from "./properties.js";
 /// import * as Autodesk from "@types/forge-viewer";
 
 async function getAccessToken(callback) {
@@ -30,8 +31,10 @@ export function initViewer(container) {
 
 export function loadModel(viewer, urn) {
     return new Promise(function (resolve, reject) {
-        function onDocumentLoadSuccess(doc) {
-            resolve(viewer.loadDocumentNode(doc, doc.getRoot().getDefaultGeometry()));
+        async function onDocumentLoadSuccess(doc) {
+            await viewer.loadDocumentNode(doc, doc.getRoot().getDefaultGeometry());
+            setupProperties(viewer);
+            resolve();
         }
         function onDocumentLoadFailure(code, message, errors) {
             reject({ code, message, errors });
