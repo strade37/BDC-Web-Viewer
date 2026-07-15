@@ -15,25 +15,50 @@
     <!-- Header -->
     <header id="header">
         <div class="header-left">
-            <img class="logo" 
-            src="/assets/images/logo-bdc.png" 
-            alt="Binkei Digital Construction">
+            <img 
+                class="logo" 
+                src="/assets/images/logo-bdc.png" 
+                alt="Binkei Digital Construction">
             <span class="title">Binkei Digital Construction</span>
         </div>
         
         <div class="header-center">
-        <input
-            id="search"
-            type="text"
-            placeholder="Search Project">
+            <input
+                class="input"
+                id="search"
+                type="text"
+                placeholder="Search Project">
         </div>
         
         <div class="header-right">
-            <select name="models" id="models"></select>
-            <button id="upload" title="Upload New Model">Upload</button>
-            <input style="display: none" type="file" id="input">
-            <button id="setting">⚙</button>
-            <button id="user">👤</button>
+            <select
+                class="dropdown"
+                name="models"
+                id="models">
+            </select>
+
+            <button 
+                id="upload" 
+                class="btn btn-primary" 
+                title="Upload New Model">
+                Upload
+            </button>
+
+            <input class="hidden" type="file" id="input">
+
+            <button
+                id="setting"
+                class="icon-button"
+                title="Settings">
+                <img src="/assets/icons/settings.svg" alt="Settings">
+            </button>
+
+            <button
+                id="user"
+                class="icon-button"
+                title="User">
+                <img src="/assets/icons/user.svg" alt="User">
+            </button>
         </div>
 
     </header>
@@ -43,44 +68,68 @@
         <!-- Sidebar -->
         <aside id="sidebar">
 
-                <div class="menu-item active">
-                    <img src="/assets/icons/dashboard.svg">
-                    <span>Dashboard</span>
-                </div>
+            <div class="menu-item active">
+                <img src="/assets/icons/dashboard.svg" alt="Dashboard">
+                <span>Dashboard</span>
+            </div>
 
-                <div class="menu-item">
-                    <img src="/assets/icons/model.svg">
-                    <span>Models</span>
-                </div>
+            <div class="menu-item">
+                <img src="/assets/icons/model.svg" alt="Models">
+                <span>Models</span>
+            </div>
 
-                <div class="menu-item">
-                    <img src="/assets/icons/document.svg">
-                    <span>Documents</span>
-                </div>
+            <div class="menu-item">
+                <img src="/assets/icons/document.svg" alt="Documents">
+                <span>Documents</span>
+            </div>
 
-                <div class="menu-item">
-                    <img src="/assets/icons/issues.svg">
-                    <span>Issues</span>
-                </div>
+            <div class="menu-item">
+                <img src="/assets/icons/issues.svg" alt="Issues">
+                <span>Issues</span>
+            </div>
 
-                <div class="menu-item">
-                    <img src="/assets/icons/clash.svg">
-                    <span>Clash</span>
-                </div>
+            <div class="menu-item">
+                <img src="/assets/icons/clash.svg" alt="Clash">
+                <span>Clash</span>
+            </div>
 
-                <div class="menu-item">
-                    <img src="/assets/icons/settings.svg">
-                    <span>Settings</span>
-                </div>
+            <div class="menu-item">
+                <img src="/assets/icons/settings.svg" alt="Settings">
+                <span>Settings</span>
+            </div>
 
         </aside>
 
         <!-- Viewer -->
         <section id="viewer-container">
-            <!-- APS Viewer -->
-            <div id="preview"></div>
-            <!-- Notification Overlay -->
-            <div id="overlay"></div>
+
+            <!-- Viewer Area -->
+            <div id="viewer-area">
+                <!-- APS Viewer -->
+                <div id="preview"></div>
+
+                <!-- Notification Overlay -->
+                <div id="overlay"></div>
+            </div>
+
+            <!-- Right Panel -->
+             <aside id="right-panel">
+
+                <div class="panel-header">
+                    <h3>Properties</h3>
+                </div>
+
+                <div class="panel-content">
+
+                    <div class="empty-state">
+                        Select an object<br>
+                        to view its properties
+                    </div>
+
+                </div>
+
+            </aside>
+
         </section>
     </main>
 

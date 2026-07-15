@@ -59,12 +59,6 @@ body, html {
 
 #search {
     width: 350px;
-    height: 36px;
-    padding: 0 12px;
-
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    outline: none;
 }
 
 .logo {
@@ -75,12 +69,12 @@ body, html {
 /* ==========================================================
    MAIN LAYOUT
 ========================================================== */
-
 #main-layout {
     display: flex;
     margin-top: 64px;
     height: calc(100vh - 64px);
 }
+
 /* ==========================================================
    SIDEBAR
 ========================================================== */
@@ -88,10 +82,8 @@ body, html {
 #sidebar {
     width: 260px;
     flex-shrink: 0;
-
     background: #ffffff;
     border-right: 1px solid #e5e7eb;
-
     overflow-y: auto;
 }
 
@@ -126,11 +118,17 @@ body, html {
     font-weight: 600;
     border-right: 3px solid #0066cc;
 }
+
 /* ==========================================================
    VIEWER
 ========================================================== */
 
 #viewer-container {
+    flex: 1;
+    display: flex;
+}
+
+#viewer-area {
     flex: 1;
     position: relative;
 }
@@ -141,6 +139,15 @@ body, html {
     inset: 0;
 }
 
+#right-panel {
+    width: 320px;
+    flex-shrink: 0;
+
+    background: #ffffff;
+    border-left: 1px solid #e5e7eb;
+
+    overflow-y: auto;
+}
 
 #overlay {
     z-index: 1;
@@ -156,20 +163,165 @@ body, html {
     background: white;
 }
 
+/* ==========================================================
+   RIGHT PANEL
+========================================================== */
 
+.panel-header {
+    height: 56px;
 
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    background: #ffffff;
+}
+
+.panel-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.panel-content {
+    padding: 20px;
+}
+
+.empty-state {
+    color: #6b7280;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    text-align: center;
+
+    margin-top: 80px;
+}
 
 /* ==========================================================
    FOOTER
 ========================================================== */
 
 
-
 /* ==========================================================
    COMPONENTS
 ========================================================== */
 
-/* nanti button */
-/* nanti dropdown */
-/* nanti modal */
-/* nanti card */
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.btn {
+    height: 36px;
+    padding: 0 16px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: all .2s ease;
+}
+
+.btn:hover {
+    background: #f3f4f6;
+}
+.btn-primary {
+    background: #0066cc;
+    color: white;
+    border-color: #0066cc;
+}
+
+.btn-primary:hover {
+    background: #0057b8;
+}
+
+/* ==========================================================
+   INPUT
+========================================================== */
+
+.input {
+    height: 36px;
+    padding: 0 12px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+/* ==========================================================
+   DROPDOWN
+========================================================== */
+
+.dropdown {
+    height: 36px;
+
+    padding: 0 12px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    background: white;
+
+    font-size: 14px;
+}
+
+/* ==========================================================
+   ICON BUTTON
+========================================================== */
+
+.icon-button {
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    background: white;
+
+    cursor: pointer;
+
+    transition: all .2s ease;
+}
+
+.icon-button:hover {
+    background: #f3f4f6;
+
+}
+
+.icon-button img {
+    width: 18px;
+    height: 18px;
+}
+
+/* ==========================================================
+   UTILITIES
+========================================================== */
+
+.hidden {
+    display: none;
+}
+
+/* ==========================================================
+   MODAL
+========================================================== */
+
+/* ==========================================================
+   CARD
+========================================================== */
