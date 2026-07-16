@@ -8,14 +8,13 @@ export function setupProperties(viewer) {
     function onSelectionChanged(event) {
 
         if (!event.dbIdArray.length) {
+            clearProperties();
             return;
         }
 
         const dbId = event.dbIdArray[0];
 
         viewer.getProperties(dbId, (result) => {
-
-            console.log(result);
 
             renderProperties(result);
 
@@ -59,8 +58,12 @@ for (const category in groups) {
         <div class="property-group">
 
             <div class="property-group-title">
+                <span class="toggle-icon">▼</span>
+                <span class="group-title">
                 ${category}
+                </span>
             </div>
+            <div class="property-group-content">
     `;
 
 
@@ -85,10 +88,47 @@ for (const category in groups) {
 
     html += `
         </div>
+        </div>
     `;
 
 }
 
 
 propertyList.innerHTML = html;
+const titles = document.querySelectorAll(".property-group-title");
+
+titles.forEach(title => {
+
+    title.addEventListener("click", () => {
+
+        const content = title.nextElementSibling;
+        const icon = title.querySelector(".toggle-icon");
+
+        if (content.style.display === "none") {
+
+            content.style.display = "block";
+            icon.textContent = "▼";
+
+        } else {
+
+            content.style.display = "none";
+            icon.textContent = "▶";
+
+        }
+
+    });
+
+});
+}
+
+function clearProperties() {
+
+    const emptyState = document.querySelector(".empty-state");
+    const propertyList = document.querySelector(".property-list");
+
+    emptyState.classList.remove("hidden");
+    propertyList.classList.add("hidden");
+
+    propertyList.innerHTML = "";
+
 }

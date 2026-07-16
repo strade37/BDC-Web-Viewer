@@ -206,6 +206,11 @@ body, html {
 }
 
 .property-group-title {
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
     margin-bottom: 12px;
 
     color: #6b7280;
@@ -214,11 +219,39 @@ body, html {
     font-weight: 600;
 
     text-transform: uppercase;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.toggle-icon {
+
+    width: 14px;
+    display: inline-block;
+
+    color: #6b7280;
+
+    transition: transform .2s ease;
+
+}
+
+.group-title {
+
+    flex: 1;
+
+}
+
+.property-group-content {
+
+    margin-top: 8px;
+
 }
 
 .property-item {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
 
     padding: 8px 0;
 
@@ -226,14 +259,18 @@ body, html {
 }
 
 .property-name {
+    flex: 0 0 40%;
     color: #6b7280;
     font-size: 13px;
 }
 
 .property-value {
+    flex: 1;
     color: #111827;
     font-size: 13px;
     font-weight: 500;
+    text-align: right;
+    word-break: break-word;
 }
 
 /* ==========================================================
