@@ -33,15 +33,38 @@ function renderProperties(result) {
     emptyState.classList.add("hidden");
     propertyList.classList.remove("hidden");
 
-    let html = `
+    // Group berdasarkan Category
+    const groups = {};
+
+    for (const property of result.properties) {
+
+        const category = property.displayCategory || "Other";
+
+        if (!groups[category]) {
+            groups[category] = [];
+        }
+
+        groups[category].push(property);
+
+    }
+
+    console.log(groups);
+
+
+    let html = "";
+
+for (const category in groups) {
+
+    html += `
         <div class="property-group">
 
             <div class="property-group-title">
-                Properties
+                ${category}
             </div>
     `;
 
-    for (const property of result.properties) {
+
+    for (const property of groups[category]) {
 
         html += `
             <div class="property-item">
@@ -59,10 +82,13 @@ function renderProperties(result) {
 
     }
 
+
     html += `
         </div>
     `;
 
-    propertyList.innerHTML = html;
+}
 
+
+propertyList.innerHTML = html;
 }
