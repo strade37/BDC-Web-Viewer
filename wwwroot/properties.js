@@ -50,7 +50,21 @@ function renderProperties(result) {
     console.log(groups);
 
 
-    let html = "";
+    let html = `
+
+    <div class="selected-object">
+
+        <div class="selected-object-name">
+            ${result.name}
+        </div>
+
+        <div class="selected-object-id">
+            dbId : ${result.dbId}
+        </div>
+
+    </div>
+
+`;
 
 for (const category in groups) {
 

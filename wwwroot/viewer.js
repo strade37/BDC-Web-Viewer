@@ -1,4 +1,5 @@
 import { setupProperties } from "./properties.js";
+import { setupModelTree } from "./model-tree.js";
 /// import * as Autodesk from "@types/forge-viewer";
 
 async function getAccessToken(callback) {
@@ -34,6 +35,7 @@ export function loadModel(viewer, urn) {
         async function onDocumentLoadSuccess(doc) {
             await viewer.loadDocumentNode(doc, doc.getRoot().getDefaultGeometry());
             setupProperties(viewer);
+            setupModelTree(viewer);
             resolve();
         }
         function onDocumentLoadFailure(code, message, errors) {

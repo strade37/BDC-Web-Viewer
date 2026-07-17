@@ -119,6 +119,46 @@ body, html {
     border-right: 3px solid #0066cc;
 }
 
+.sidebar-browser{
+
+    margin-top:24px;
+
+    border-top:1px solid #e5e7eb;
+
+}
+
+.sidebar-browser-header{
+
+    padding:16px 20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    color:#6b7280;
+
+    text-transform:uppercase;
+
+}
+
+#model-tree{
+
+    max-height:400px;
+
+    overflow:auto;
+
+}
+
+.tree-empty{
+
+    padding:0 20px 20px;
+
+    color:#9ca3af;
+
+    font-size:13px;
+
+}
+
 /* ==========================================================
    VIEWER
 ========================================================== */
@@ -199,6 +239,34 @@ body, html {
     text-align: center;
 
     margin-top: 80px;
+}
+
+.selected-object {
+
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+}
+
+.selected-object-name {
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #111827;
+
+    margin-bottom: 4px;
+
+}
+
+.selected-object-id {
+
+    font-size: 12px;
+
+    color: #6b7280;
+
 }
 
 .property-group {
@@ -397,3 +465,64 @@ body, html {
 /* ==========================================================
    CARD
 ========================================================== */
+
+.tree-node,
+.tree-child{
+
+    padding:6px 12px;
+
+    font-size:13px;
+
+    cursor:pointer;
+
+}
+
+.tree-children{
+
+    padding-left:20px;
+
+}
+
+.tree-node{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+}
+
+.tree-arrow{
+
+    width:12px;
+
+    cursor:pointer;
+
+    user-select:none;
+
+}
+
+.tree-arrow-empty{
+
+    width:12px;
+
+}
+
+.tree-label{
+
+    flex:1;
+
+}
+
+.tree-node.active{
+
+    background:#e8f1ff;
+
+    color:#0066cc;
+
+    font-weight:600;
+
+    border-left:3px solid #0066cc;
+
+}
