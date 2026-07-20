@@ -1,4 +1,5 @@
 import { initViewer, loadModel } from './viewer.js';
+import { setupNavigation } from "./navigation.js";
 
 
 initViewer(document.getElementById('preview')).then(viewer => {
